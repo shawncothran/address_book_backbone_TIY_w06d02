@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>downtown no gaki no tsukai ya arahende</title>
+    <link rel="stylesheet" href="styles/css.css">
+  </head>
+
+  <body>
+
+    <section class="form"></section>
+
+    <section class="list"></section>
+
+    <script type="text/template" id="contactFormTemplate">
+      <h1>Enter Contact</h1>
+      <input id="email" type="text" name="email" value="" placeholder="Email ex. me@email.com">
+      <input id="firstName" type="text" name="firstName" value="" placeholder="First Name ex. John">
+      <input id="lastName" type="text" name="lastName" value="" placeholder="Last Name ex. Doe">
+      <input id="phoneNumber" type="text" name="title" value="" placeholder="Phone Number ex. 5553331234">
+      <input id="twitterHandle" type="text" name="title" value="" placeholder="@twitterhandle">
+      <input id="linkedin" type="text" name="title" value="" placeholder="linkedin name">
+      <input id="saveBtn" type="submit" name="send" value="Save">
+    </script>
+
+    <script type="text/template" id="contactListTemplate">
+      <h1>Contacts</h1>
+      <ul>
+        <% _.forEach(contacts, function(contact){ %>
+          <li>
+            <ul>
+              <h2><%= contact.firstName %> <%= contact.lastName %></h2>
+              <li><%= contact.email %></li>
+              <li><%= contact.phoneNumber %></li>
+              <li><%= contact.twitterHandle %></li>
+              <li><%= contact.linkedin %></li>
+            </ul>
+          </li>
+        <% }) %>
+      </ul>
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+
+</html>
